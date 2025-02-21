@@ -13,6 +13,7 @@ RUN dnf -y groupinstall "Console Internet Tools" && \
 
 # Install some quality of life tools to enhance the container.
 RUN dnf -y install \
+    curl \
     gh \
     osbuild-ostree \
     ostree \
@@ -20,7 +21,8 @@ RUN dnf -y install \
     python-pip \
     python-devel \
     rpm-ostree \
-    vim
+    vim \
+    wget
 
 # Install the AWS CLI for S3 access and management.
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "/tmp/awscliv2.zip" && \
