@@ -12,7 +12,7 @@ RUN dnf -y groupinstall "Console Internet Tools" && \
     dnf -y groupinstall "RPM Development Tools"
 
 # Install some quality of life tools to enhance the container.
-RUN dnf -y install \
+RUN dnf -y install --allowerasing \
     curl \
     gh \
     osbuild-ostree \
